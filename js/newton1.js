@@ -61,9 +61,10 @@ const dragable = document.getElementById("dragable"),
 dragElement(dragable, dragzone);
 
 
-document.onmousemove = function (event) {
-    currentEvent = event;
-};
+// document.onmousemove = function (event) {
+//     curusrentEvent = event;
+// };
+mousemove()
 
 var maxSpeed = 0,
     prevSpeed = 0,
