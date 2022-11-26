@@ -1,3 +1,12 @@
+
+var prevEvent, currentEvent;
+const mousemove = () => {
+    document.onmousemove = function (event) {
+        currentEvent = event;
+    };
+}
+
+
 const dragElement = (element, dragzone) => {
     let pos1 = 0,
         pos2 = 0,
@@ -7,8 +16,8 @@ const dragElement = (element, dragzone) => {
     //MouseUp occurs when the user releases the mouse button
     const dragMouseUp = () => {
         document.onmouseup = null;
-        //onmousemove attribute fires when the pointer is moving while it is over an element.
-        document.onmousemove = null;
+        // sets currentEvent = event to give all the data (acc, pos, speed, etc.)
+        document.onmousemove = mousemove;
 
         element.classList.remove("drag");
     };
@@ -24,6 +33,9 @@ const dragElement = (element, dragzone) => {
         //offsetTop property returns the top position relative to the parent
         //   element.style.top = `${element.offsetTop - pos2}px`;
         element.style.left = `${element.offsetLeft - pos1}px`;
+        
+        // sets currentEvent = event to give all the data (acc, pos, speed, etc.)
+        currentEvent = event;
     };
 
     const dragMouseDown = (event) => {
@@ -36,6 +48,8 @@ const dragElement = (element, dragzone) => {
 
         document.onmouseup = dragMouseUp;
         document.onmousemove = dragMouseMove;
+        // document.onmousemove = mousemove;
+
     };
 
     dragzone.onmousedown = dragMouseDown;
@@ -46,7 +60,7 @@ const dragable = document.getElementById("dragable"),
 
 dragElement(dragable, dragzone);
 
-var prevEvent, currentEvent;
+
 document.onmousemove = function (event) {
     currentEvent = event;
 };
