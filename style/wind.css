@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  height: 100vh;
+  width: 100%;
+  background: url("../assets/windbg.png");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------- */
+
+.container {
+  height: 100%;
+  width: 100%;
+  /* background-color: aliceblue; */
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.turbine {
+  height: 100%;
+  width: auto;
+  /* background-color: #d3d3d3; */
+}
+
+.turbine .turbine1 {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+.controls {
+  height: 100%;
+  width: auto;
+  background-color: #fff;
+  border-left: 1px solid black;
+}
+
+.controls .slidecontainer {
+  /* background-color: #04AA6D; */
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
+.controls .slidecontainer .velocity {
+  margin-bottom: 1rem;
+}
+
+.controls .slidecontainer #demo {
+  font-size: 18px;
+  margin-top: 1rem;
+}
+
+.scontainer {
+  position: absolute;
+  top: 42%;
+  left: 45%;
+}
+
+.station {
+  height: 350px;
+  width: 350px;
+}
+
+.controls .result {
+  margin-top: 3rem;
+  font-weight: 500;
+}
+
+.controls .result .rpm {
+  margin-bottom: 1rem;
+}
+
+.controls .reset {
+  height: 30px;
+  width: 100px;
+  font-size: 15px;
+  margin-top: 50px;
+  background: #03ff81;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 5px rgba(0, 0, 0, 0.521);
+  cursor: pointer;
+  transition: transform 0.1s ease-in;
+}
+
+.controls .reset:hover {
+  transform: translateY(-2px);
+}
+
+.scontainer .powerd {
+  position: absolute;
+  bottom: 50px;
+  left: 80px;
+  display: inline-block;
+  background-color: #03ff81;
+  padding: 5px 20px;
+}

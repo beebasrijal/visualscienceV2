@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+
+.header {
+    height: 100vh;
+    width: 100%;
+    background: rgb(232,152,174);
+    background: linear-gradient(90deg, rgba(232, 152, 173, 0.92) 0%, rgba(136, 181, 235, 0.92) 100%), url("../assets/science.svg");
+}
+
+.header .navbar {
+    height: 70px;
+    width: 100%;
+    padding: 1%;
+    border-bottom: 1px solid rgba(71, 70, 70, 0.342);
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 150px;
+    align-content: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    align-items: center;
+    align-content: center;
+    background: linear-gradient(90deg, rgba(232, 152, 174, 1) 0%, rgba(136,181,235,1) 100%);
+}
+
+.header .navbar .navlist {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header .navbar .navlist .nav_el.active a {
+    background-color: #ff4274;
+    color: aliceblue;
+}
+
+.header .navbar .navlist .nav_el a {
+    margin-right: 50px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.25s;
+    text-decoration: none;
+    color: #111;
+}
+
+.header .navbar .navlist .nav_el a:hover {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/* Header */
+
+.front {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: titleanim 1s 1;
+}
+
+.front .title {
+    display: inline-block;
+    font-size: 45px;
+    color: #111;
+    text-transform: uppercase;
+    background-color: rgb(157, 191, 233);
+    padding: 2px 25px;
+    border-radius: 30px;
+    box-shadow: 5px 10px #111;
+}
+
+@keyframes titleanim {
+    from {
+        transform: translate(-50%, -30%);
+        opacity: 0;
+    } to {
+        transform: translate(-50%, -50%);
+        opacity: 100;
+    }
+}
+
+.footer {
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(232, 152, 173, 0.92) 0%, rgba(136, 181, 235, 0.92) 100%);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    position: absolute;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 7rem;
+    margin-top: 5px;
+}
+
+.header .navbar .logolink {
+    width: 50px;
+}
+
+/* .arrow {
+    color: black;
+    font-size: 35px;
+    position: absolute;
+    top: 100%;
+}
+
+.arrowdiv .scroll {
+    font-size: 18px;
+    margin: 5px;
+} */

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variation in Acceleration due to Gravity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style/loading.css" />
+    <link rel="stylesheet" href="../style/g.css" />
+  </head>
+  <body>
+    <a href="/" class="logolink"
+      ><img
+        class="logo"
+        src="../assets/favicon_io/android-chrome-512x512.png"
+        alt="Logo"
+    /></a>
+    <div class="parent">
+      <div class="circles">
+        <div class="container">
+          <img
+            src="../assets/football.svg"
+            alt="Body 2"
+            class="circle2"
+            id="circle-2"
+          />
+          <div class="circlep">
+            <img
+              src="../assets/earth2.svg"
+              alt="Body 1"
+              class="circle1"
+              id="circle-1"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="inputs">
+          <div class="slidecontainer">
+            <div class="heightdiv">
+              <h3 class="heighttitle">Height</h3>
+              <input
+                type="range"
+                min="0"
+                max="3400"
+                value="0"
+                class="slider"
+                id="slider-height"
+              />
+              <p class="height">0 km</p>
+            </div>
+            <br />
+            <div class="depthdiv">
+              <h3 class="depthtitle">Depth</h3>
+              <input
+                type="range"
+                min="0"
+                max="64"
+                value="0"
+                class="slider"
+                id="slider-depth"
+              />
+              <p class="depth">0 km</p>
+            </div>
+          </div>
+        </div>
+        <div id="values-container" class="valuecontainer">
+          <div id="acceleration" class="force">
+            <span class="fd">Acceleration</span> = 9.8 ms<sup>-2</sup>
+          </div>
+        </div>
+        <button class="reset" id="reset">Reset</button>
+      </div>
+    </div>
+    <a href="/"><i class="fas fa-home home"></i></a>
+  </body>
+  <script src="../js/g.js"></script>
+</html>

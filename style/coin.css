@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  background: url(../assets/background.webp);
+  background-position: center;
+  /* background-size: cover; */
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+}
+
+.outercontainer {
+  height: 550px;
+  width: 350px;
+  border: 3px solid #000;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  padding: 100px;
+  background-color: aquamarine;
+}
+
+.container {
+  height: 500px;
+  width: 300px;
+  /* background-color: aqua; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #000;
+  border-radius: 10px;
+  background-color: aliceblue;
+  transition: background-color .3s ease-in;
+}
+
+.pipe1 {
+  height: 25px;
+  width: 237px;
+  background-color: aliceblue;
+  border-bottom: 3px solid #000;
+  border-top: 3px solid #000;
+  /* border-right: 3px solid #000; */
+  position: absolute;
+  top: 466.5px;
+  right: -237px;
+  z-index: 7;
+  transition: background-color .4s ease-in;
+}
+
+/* .pipe2 {
+  height: 30px;
+  width: 25px;
+  background-color: aliceblue;
+  position: absolute;
+  top: 422px;
+  right: -200px;
+  border-top: 3px solid aliceblue;
+  border-right: 3px solid #000;
+  border-left: 3px solid #000;
+} */
+
+.container .elements {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.coin {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  /* background-color: #222; */
+  position: absolute;
+  top: 446px;
+  left: 50px;
+  /* transition: top; */
+  animation: motino 1.2s ease-in;
+}
+
+@keyframes motino {
+  from {
+    top: 0;
+  }
+  to {
+    top: 448px;
+  }
+}
+
+.feather {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 445px;
+  right: 50px;
+  fill: #fff;
+  /* border-radius: 50%; */
+  /* background-color: #222; */
+  animation: motino 1.6s ease-in;
+}
+
+.motor {
+  height: 150px;
+  width: auto;
+  position: absolute;
+  top: 80%;
+  right: -100%;
+  border-radius: 10px;
+}
+
+.switchbox {
+  height: 50px;
+  width: 30px;
+  position: absolute;
+  top: 92%;
+  right: -132%;
+  border: 2.9px solid#000;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Switch */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  cursor: pointer;
+  /* top: 100%;
+  left: 100%; */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: palevioletred;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 2.6px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.controls {
+  background-color: white;
+  height: 180px;
+  width: 300px;
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  padding: 30px;
+  border: 3px solid #555;
+  border-radius: 10px;
+  box-shadow: 5px 10px rgba(73, 73, 73, 0.884);
+  transform: translate(-2%, -40%);
+}
+
+.runbtn {
+  height: 40px;
+  width: 100px;
+  margin-top: 10%;
+  background-color: #2196F3;
+  border: 3px solid #2196F3;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  transition: color .4s ease-in-out;
+  transition: background-color .4s ease-in-out;
+}
+
+.runbtn:hover {
+  background-color: white;
+  border: 3px solid #2196F3;
+  cursor: pointer;
+  color: #000;
+  font-size: 20px;
+}

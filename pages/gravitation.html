@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gravitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style/loading.css">
+    <link rel="stylesheet" href="../style/gravitation.css">
+  </head>
+  <body scroll="no" style="overflow: hidden;" onload="removeloader();resetWindow()">
+    <div id = "page-content">
+	
+      <div style="width:100px;">
+      <div style="position:absolute;  top:50%; left: 50%; transform: translate(-50%, -50%);"> <!-- Change this value to move whole logo -->
+        <div style="display:static; position:relative; overflow:hidden; width:300px; height: 300px;">
+          <img src="../assets/favicon_io/android-chrome-512x512.png" alt="Logo" id="center">
+          <div id="orbitX">
+          </div>
+          <div id="orbitY">
+            <p style="margin: 0 0 0 90px;"></p>
+          </div>
+          <div id="orbitZ">
+            <p style="margin: 25px 0 0 75px;"></p>
+          </div>
+        </div>   
+      </div>
+      </div>
+    </div>
+
+    <a href="/" class="logolink"><img class="logo" src="../assets/favicon_io/android-chrome-512x512.png" alt="Logo"></a>
+    <div class="parent">
+      <div class="container">
+        <img id="circle-1" class="circle1" src="../assets/planet1.svg" alt="Body 1">
+        <img id="circle-2" class="circle2" src="../assets/planet2.svg" alt="Body 1">
+      </div>
+
+      <div class="controls">
+        <div class="inputs">
+          <div class="slidecontainer">
+            <div class="m1">
+              <h3 class="mass1_t">Mass 1</h4>
+              <input type="range" min="1" max="10" value="1" class="slider" id="mass1"> <br>
+              <p class="mass1value">1 Billion Kg</p>
+            </div>
+            <div class="m2">
+              <h3 class="mass1_t">Mass 2</h4>
+              <input type="range" min="1" max="10" value="1" class="slider" id="mass2">
+              <p class="mass2value">1 Billion Kg</p>
+
+            </div>
+          </div>
+        </div>
+        <div id="values-container" class="valuecontainer">
+          <h3 id="force-value-container" class="force"><span class="fd">Force</span> = 4N</h3>
+          <h3 id="distance-value-container" class="force"><span class="fd">Distance</span> = 4km</h3>
+        </div>
+        <button class="reset">Reset</button>
+      </div>
+    </div>
+    <a href="/"><i class="fas fa-home home"></i></a>
+  </body>
+
+  <script>
+    const loader = document.querySelector("#page-content");
+    const body  = document.querySelector("body");
+  
+    const removeloader = () => {
+      loader.style.opacity = "0";
+      setTimeout(() => {
+        loader.remove();
+        body.removeAttribute("scroll");
+        body.removeAttribute("style");
+      }, 1000);
+    }
+    window.onload=removeloader();
+</script>
+  <script src="../js/gravitation.js"></script>
+</html>

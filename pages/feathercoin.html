@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin and Feather Experiment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style/loading.css">
+    <link rel="stylesheet" href="../style/coin.css" />
+  </head>
+  <body scroll="no" style="overflow: hidden;" onload="removeloader()">
+    <div id="page-content">
+	
+      <div style="width:100px;">
+      <div style="position:absolute;  top:50%; left: 50%; transform: translate(-50%, -50%);"> <!-- Change this value to move whole logo -->
+        <div style="display:static; position:relative; overflow:hidden; width:300px; height: 300px;">
+          <img src="../assets/favicon_io/android-chrome-512x512.png" alt="Logo" id="center">
+          <div id="orbitX">
+          </div>
+          <div id="orbitY">
+            <p style="margin: 0 0 0 90px;"></p>
+          </div>
+          <div id="orbitZ">
+            <p style="margin: 25px 0 0 75px;"></p>
+          </div>
+        </div>   
+      </div>
+      </div>
+    </div>
+    <a href="/" class="logolink"><img class="logo" src="../assets/favicon_io/android-chrome-512x512.png" alt="Logo"></a>
+    <div class="outercontainer">
+      <div class="container">
+        <div class="pipe1"></div>
+        <div class="pipe2"></div>
+        <div class="switchbox">
+          <label class="switch">
+            <input onclick="changeColor()" type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="elements">
+          <img class="coin" src="../assets/dollar-coin.svg" alt="dollar Coin" />
+          <img class="feather" src="../assets/feather.svg" alt="beatiful feather" />
+        </div>
+      </div>
+      <img class="motor" src="../assets/motor.png" alt="Vacuum Motor">
+    </div>
+
+    <div class="controls">
+      <h3 class="medium">Current Medium Inside Chamber: Air</h3>
+      <button onclick="restart()" class="runbtn">Run</button> <br>
+    </div>
+
+    <script>
+      const loader = document.querySelector("#page-content");
+      const body  = document.querySelector("body");
+
+      const removeloader = () => {
+        loader.style.opacity = "0";
+        setTimeout(() => {
+          loader.remove();
+          body.removeAttribute("scroll");
+          body.removeAttribute("style");
+        }, 1000);
+      }
+    </script>
+    <script src="../js/coin.js"></script>
+  </body>
+</html>

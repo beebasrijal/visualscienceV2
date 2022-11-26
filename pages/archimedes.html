@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archimedes Principle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style/archimedes.css" />
+  </head>
+  <body>
+    <div class="parent">
+      <div class="container">
+        <div class="container2">
+          <img
+            src="../assets/spring_final.svg"
+            alt="spring_balance"
+            class="spring"
+          />
+          <div class="cup">
+            <div class="outline"></div>
+            <div class="liquid"></div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="values">
+          Liquid: &ThickSpace;
+          <select name="" id="select-liquid">
+            <option value="0">Water</option>
+            <option value="1">Oil</option>
+            <option value="2">Honey</option>
+          </select>
+          <h3 id="airweight" class="results">
+            Initial Weight of block in air = 15 N
+          </h3>
+          <h3 id="final-weight" class="results">Weight of block : 15 N</h3>
+          <h3 id="density" class="results">Density: 1000 kg/m<sup>3</sup></h3>
+          <h3 id="weight-displaced" class="results">
+            Weight of liqiud displaced: 0 N
+          </h3>
+          <div class="button" id="reset">Reset</div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="../js/archimedes.js"></script>
+  <!-- <script src="windTurbine.js"></script> -->
+</html>

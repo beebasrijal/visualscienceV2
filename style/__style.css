@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+
+.header {
+    width: 100%;
+    /* background: rgb(232,152,174); */
+    /* background: linear-gradient(90deg, rgba(232, 152, 173, 0.92) 0%, rgba(136, 181, 235, 0.92) 100%), url("../assets/science.svg"); */
+}
+
+.header .navbar {
+    height: 70px;
+    width: 100%;
+    padding: 1%;
+    border-bottom: 1px solid rgba(71, 70, 70, 0.342);
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 150px;
+    align-content: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    align-items: center;
+    align-content: center;
+    background: linear-gradient(90deg, rgba(232, 152, 174, 1) 0%, rgba(136,181,235,1) 100%);
+}
+
+.header .navbar .navlist {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header .navbar .navlist .nav_el.active a {
+    background-color: #ff4274;
+    color: aliceblue;
+}
+
+.header .navbar .navlist .nav_el a {
+    margin-right: 50px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.25s;
+    text-decoration: none;
+    color: #111;
+}
+
+.header .navbar .navlist .nav_el a:hover {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.footer {
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(232, 152, 173, 0.92) 0%, rgba(136, 181, 235, 0.92) 100%);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 7rem;
+    margin-top: 5px;
+}
+
+.header .navbar .logolink {
+    width: 50px;
+}
+
+.body {
+    width: 40%;
+    height: 100%;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-size: 18px;
+    text-justify: distribute-all-lines;
+}
+
+.aboutus {
+    margin-bottom: 30px;
+    text-decoration: underline;
+}

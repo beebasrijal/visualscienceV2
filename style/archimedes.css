@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background: #262626;
+   */
+  height: 100vh;
+  width: auto;
+  overflow: hidden;
+  font-family: "Poppins";
+}
+
+.parent {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1.2fr;
+}
+
+.container {
+  width: auto;
+  background: linear-gradient(90deg, rgba(146, 255, 250, 0.815), rgb(97, 192, 255));
+}
+
+.spring {
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  top: 5%;
+  margin-left: 50px;
+  right: 60%;
+}
+
+.cup {
+  position: absolute;
+  top: 71%;
+  margin-left: 50px;
+  width: 150px;
+  height: 180px;
+  border: 6px solid #262626;
+  border-top: 2px solid transparent;
+  border-radius: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  right: 60%;
+}
+
+.liquid {
+  background-color: aqua;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid black;
+  /* border-radius: 15px; */
+}
+
+#select-liquid {
+  font-size: 18px;
+  background-color: aquamarine;
+}
+
+.values {
+  margin: 40px 30px;
+  /* padding: 10px; */
+}
+
+#final-weight {
+  margin: 20px 0;
+}
+
+.results {
+  font-size: 18px;
+}
+
+.button {
+  margin: 50px 0;
+  background-color: aquamarine;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  font-size: 18px;
+  border-radius: 20px;
+  box-shadow: 2px 5px rgb(49, 49, 49);
+  cursor: pointer;
+}
+
+.controls {
+  border-left: 1px solid black;
+}
+
+#airweight {
+  margin-top: 70px;
+}
