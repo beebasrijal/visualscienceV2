@@ -1,0 +1,105 @@
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 9.8px;
+    }
+
+    .body {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    html {
+        font-size: 8.5px;
+    }
+
+    .cards-wrapper {
+        grid-gap: 7rem;
+    }
+
+    .body {
+        width: 50%;
+    }
+
+    .transformer {
+        top: 45%;
+        height: 35rem;
+    }
+
+    .controls .slidecontainer {
+        margin: 0.5rem 3rem;
+    }
+
+    .controls .pcoil,
+    .controls .scoil {
+        margin-top: 03rem;
+        font-size: 1.4rem;
+    }
+
+    .pvoltage {
+        margin-top: 03rem;
+        font-size: 1.4rem;
+    }
+
+    .pcurrent {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .ppower {
+        font-size: 1.2rem;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        width: 20rem;
+        height: 1.5rem;
+        margin-top: 5px;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .scoil {
+        margin-bottom: 1.5rem;
+        margin-top: 0.2rem;
+    }
+
+    .type {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 7px;
+    }
+
+    .body {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 6px;
+    }
+
+    .body {
+        width: 80%;
+    }
+}
+/* @media only screen and (min-width: 600px) {
+    html,
+    body {
+        font-size: 5px;
+    }
+} */

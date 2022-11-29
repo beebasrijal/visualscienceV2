@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: "Poppins";
+}
+
+.coils {
+    position: relative;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 173, 216, 0.815),
+        rgba(0, 228, 178, 0.897)
+    );
+    /* transform: rotate(90deg); */
+    /* height: 100%; */
+}
+
+.transformer {
+    height: 40rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* #coilp {
+    height: 1000px;
+    position: fixed;
+    left: 11.4%;
+}
+
+#coils {
+    height: 1000px;
+    position: fixed;
+    right: 31.4%;
+}
+
+.primary1 {
+    top: -16.5%;
+}
+
+.secondary1 {
+    top: -13%;
+} */
+
+.slider {
+    -webkit-appearance: none;
+    width: 20rem;
+    height: 1.5rem;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 02rem;
+    height: 02rem;
+    border-radius: 50%;
+    background: #04aa6d;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 02rem;
+    height: 02rem;
+    border-radius: 50%;
+    background: #04aa6d;
+    cursor: pointer;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.controls {
+    /* background-color: #04AA6D; */
+    border-left: 1px solid black;
+    /* transform: rotate(90deg); */
+    /* display: flex; */
+}
+
+.controls .slidecontainer {
+    margin: 2.5rem 3.5rem;
+    height: 100%;
+}
+
+.controls .pcoil,
+.controls .scoil {
+    margin-top: 03rem;
+    font-size: 1.6rem;
+}
+
+.pvoltage {
+    margin-top: 03rem;
+    font-size: 1.6rem;
+}
+
+.pcurrent {
+    margin-top: 4rem;
+    font-size: 1.4rem;
+}
+
+.ppower {
+    font-size: 1.4rem;
+}
+
+.primary {
+    color: rgb(0, 85, 196);
+}
+
+.secondary {
+    color: rgb(228, 0, 0);
+}
+
+.type {
+    font-size: 1.6rem;
+    margin-top: 03rem;
+    background-color: #ff6207;
+    padding: 1rem;
+    color: #000000;
+    border-radius: 5px;
+    /* font-style: italic; */
+}
+
+.scoil {
+    margin-bottom: 03rem;
+    font-size: 1.6rem;
+}
+
+.pcoilNum,
+.scoilNum,
+.pvoltageNum {
+    font-size: 1.4rem;
+}
+
+.rslt {
+    font-size: 1.4rem;
+}
