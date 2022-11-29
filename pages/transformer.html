@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style/transformer.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="coils">
+        <img
+          src="../assets/transformer_final.svg"
+          alt="Transformer"
+          class="transformer"
+        />
+        <img
+          src="../assets/windingprimary.svg"
+          alt="Transformer"
+          class="primary1"
+          id="coilp"
+        />
+        <img
+          src="../assets/windingsecondary.svg"
+          alt="Transformer"
+          class="secondary1"
+          id="coils"
+        />
+      </div>
+      <div class="controls">
+        <div class="slidecontainer">
+          <div class="pcoil">
+            <h4 class="ptitle primary">Primary Windings</h4>
+            <input
+              type="range"
+              min="1"
+              max="8"
+              value="1"
+              class="slider"
+              id="pcoil"
+              oninput="increasePcoil(this.value)"
+            />
+            <div class="pcoilNum">Number of Primary Windings: 1</div>
+          </div>
+
+          <div class="results">
+            <div class="pvoltage primary">P. Voltage</div>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="1"
+              class="slider"
+              id="pvoltage-value"
+              oninput="voltageSliderFun(this.value)"
+            />
+            <div class="pvoltageNum">Voltage Value : 1 V</div>
+
+            <div class="pcurrent primary">P. Current: 100.00 A</div>
+            <div class="ppower primary">P. Power: 100 W</div>
+
+            <div class="scoil">
+              <h4 class="stitle secondary">Secondary Windings</h4>
+              <input
+                type="range"
+                min="1"
+                max="8"
+                value="1"
+                class="slider"
+                id="scoil"
+                oninput="increaseScoil(this.value)"
+              />
+              <div class="scoilNum">Number of Secondary Windings: 1</div>
+            </div>
+            <div class="svoltage secondary">S. Voltage:</div>
+            <div class="scurrent secondary">S. Current:</div>
+            <div class="spower secondary">S. Power: 100 W</div>
+            <div class="type"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/transformer.js"></script>
+    <script>
+      let Pnumber = 0;
+      let Snumber = 0;
+
+      const Pslider = document.querySelector("#pcoil");
+      const Sslider = document.querySelector("#scoil");
+
+      const pcoilNum = document.querySelector(".pcoilNum");
+      const scoilNum = document.querySelector(".scoilNum");
+
+      const createPcoil = (num) => {
+        const pcoil = document.createElement("img");
+        pcoil.setAttribute("src", "../assets/windingprimary.svg");
+        pcoil.setAttribute("id", "coilp");
+        pcoil.setAttribute("class", "addedp");
+        pcoil.style.top = `${-8 - num * 3}%`;
+        document.querySelector(".coils").appendChild(pcoil);
+      };
+
+      const createScoil = (num) => {
+        const pcoil = document.createElement("img");
+        pcoil.setAttribute("src", "../assets/windingsecondary.svg");
+        pcoil.setAttribute("id", "coils");
+        pcoil.setAttribute("class", "addeds");
+        pcoil.style.top = `${-5 - num * 3}%`;
+        document.querySelector(".coils").appendChild(pcoil);
+      };
+
+      const increasePcoil = (num) => {
+        pcoilNum.innerHTML = "Number of Primary Windings: " + num;
+        Pnumber = parseInt(num) - 1;
+        removeElements("p");
+        for (let i = 0; i < Pnumber; i++) {
+          createPcoil(i);
+        }
+        voltageSliderFun(vslider.value);
+      };
+
+      const increaseScoil = (num) => {
+        scoilNum.innerHTML = "Number of Secondary Windings: " + num;
+        Snumber = parseInt(num - 1);
+        removeElements("s");
+        for (let i = 0; i < Snumber; i++) {
+          createScoil(i);
+        }
+        voltageSliderFun(vslider.value);
+      };
+
+      const removeElements = (s) => {
+        const addedElements = document.querySelectorAll(".added" + s);
+        addedElements.forEach((element) => {
+          element.remove();
+        });
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Poppins";
+}
+
+.coils {
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 173, 216, 0.815),
+    rgba(0, 228, 178, 0.897)
+  );
+}
+
+.transformer {
+  height: 400px;
+  position: fixed;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#coilp {
+  height: 1000px;
+  position: fixed;
+  left: 14.5%;
+}
+
+#coils {
+  height: 1000px;
+  position: fixed;
+  right: 34.5%;
+}
+
+.primary1 {
+  top: -8%;
+}
+
+.secondary1 {
+  top: -5%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.controls {
+  /* background-color: #04AA6D; */
+  border-left: 1px solid black;
+}
+
+.controls .slidecontainer {
+  margin: 20px 20px;
+}
+
+.controls .pcoil,
+.controls .scoil {
+  margin-top: 30px;
+}
+
+.pvoltage {
+  margin-top: 30px;
+}
+
+.pcurrent {
+  margin-top: 40px;
+}
+
+.primary {
+  color: rgb(0, 85, 196);
+}
+
+.secondary {
+  color: rgb(228, 0, 0);
+}
+
+.type {
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.scoil {
+  margin-bottom: 30px;
+}
