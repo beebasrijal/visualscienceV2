@@ -12,33 +12,23 @@
     .cards-wrapper {
         grid-gap: 7rem;
     }
-    .transformer {
-        top: 45%;
-        height: 35rem;
+
+    .cup {
+        height: 15rem;
+        width: 14rem;
+        top: 65%;
     }
 
-    .controls .slidecontainer {
-        margin: 0.5rem 3rem;
+    .spring {
+        height: 25rem;
+        width: 10rem;
+        right: 59.5%;
     }
-
-    .controls .pcoil,
-    .controls .scoil {
-        margin-top: 03rem;
-        font-size: 1.4rem;
+    #air-weight {
+        margin-top: 4rem;
     }
-
-    .pvoltage {
-        margin-top: 03rem;
-        font-size: 1.4rem;
-    }
-
-    .pcurrent {
-        margin-top: 2rem;
-        font-size: 1.2rem;
-    }
-
-    .ppower {
-        font-size: 1.2rem;
+    .results {
+        font-size: 1.8rem;
     }
 
     .slider {
@@ -58,33 +48,6 @@
     .slider::-moz-range-thumb {
         width: 1.8rem;
         height: 1.8rem;
-    }
-
-    .scoil {
-        margin-bottom: 1.5rem;
-        margin-top: 0.2rem;
-    }
-
-    .type {
-        margin-top: 1rem;
-    }
-
-    .cup {
-        height: 15rem;
-        width: 14rem;
-        top: 65%;
-    }
-
-    .spring {
-        height: 25rem;
-        width: 10rem;
-        right: 59.5%;
-    }
-    #air-weight {
-        margin-top: 4rem;
-    }
-    .results {
-        font-size: 1.8rem;
     }
 }
 

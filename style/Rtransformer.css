@@ -22,6 +22,43 @@
     .body {
         width: 70%;
     }
+    .transformer {
+        top: 45%;
+        height: 35rem;
+    }
+
+    .controls .slidecontainer {
+        margin: 0.5rem 3rem;
+    }
+
+    .controls .pcoil,
+    .controls .scoil {
+        margin-top: 03rem;
+        font-size: 1.4rem;
+    }
+
+    .pvoltage {
+        margin-top: 03rem;
+        font-size: 1.4rem;
+    }
+
+    .pcurrent {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .ppower {
+        font-size: 1.2rem;
+    }
+
+    .scoil {
+        margin-bottom: 1.5rem;
+        margin-top: 0.2rem;
+    }
+
+    .type {
+        margin-top: 1rem;
+    }
 
     .container {
         height: 100vh;
