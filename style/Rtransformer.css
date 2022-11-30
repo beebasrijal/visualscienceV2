@@ -1,0 +1,58 @@
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 9.8px;
+    }
+
+    .body {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    html {
+        font-size: 8.5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 7px;
+    }
+
+    .body {
+        width: 70%;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 3fr 1fr;
+        grid-template-areas:
+            "transformer"
+            "controls";
+    }
+
+    .container .coils {
+        grid-area: transformer;
+    }
+
+    .container .controls {
+        grid-area: controls;
+    }
+}
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 6px;
+    }
+
+    .body {
+        width: 80%;
+    }
+}
+/* @media only screen and (min-width: 600px) {
+    html,
+    body {
+        font-size: 5px;
+    }
+} */

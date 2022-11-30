@@ -4,6 +4,7 @@ const runbtn = document.querySelector(".runbtn");
 const container = document.querySelector(".container");
 const pipe = document.querySelector(".pipe1");
 const medium = document.querySelector(".medium");
+let body = document.querySelector("body");
 
 let state = "Air";
 
