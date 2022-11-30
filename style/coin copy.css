@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Poppins";
+    background: url(../assets/background.webp);
+    background-position: center;
+    /* background-size: cover; */
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "container controls";
+}
+
+.content {
+    grid-area: container;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2rem;
+}
+
+.outercontainer {
+    height: 55rem;
+    width: 35rem;
+    border: 3px solid #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10rem;
+    background-color: aquamarine;
+}
+
+.container {
+    height: 50rem;
+    width: 30rem;
+    /* background-color: aqua; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #000;
+    border-radius: 10px;
+    background-color: rgb(151, 206, 255);
+    transition: background-color 0.3s ease-in;
+}
+
+.container .elements {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+}
+
+.coindiv,
+.featherdiv {
+    height: auto;
+    width: 5rem;
+    /* border: 1px solid #000; */
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    margin-top: 3px;
+}
+
+.coing,
+.featherg {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.coindiv {
+    left: 5rem;
+    animation: motino 1.2s ease-in;
+}
+
+.featherdiv {
+    right: 5rem;
+    animation: motino 4s ease-in;
+}
+
+.coin {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.box {
+    height: 5rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: rgb(233, 49, 49);
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translateY(-100%);
+    border: 3px solid #000;
+    border-left: none;
+    margin-top: 3px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box .switch {
+    width: 5rem;
+    height: 3rem;
+    background-color: #fff;
+    border: none;
+    font-size: 1.8rem;
+    transition: all 0.1s ease;
+}
+
+.box .switch:hover {
+    background-color: rgb(73, 132, 243);
+    border: 2px solid #000;
+    border-radius: 5px;
+    color: #fff;
+}
+
+@keyframes motino {
+    from {
+        top: 20%;
+    }
+    to {
+        top: 100%;
+    }
+}
+
+.feather {
+    height: 5rem;
+    width: 5rem;
+}
+
+.motor {
+    height: 15rem;
+    width: auto;
+    position: absolute;
+    top: 80%;
+    right: -100%;
+    border-radius: 10px;
+}
+
+.switchbox {
+    height: 5rem;
+    width: 3rem;
+    position: absolute;
+    top: 92%;
+    right: -132%;
+    border: 2.9px solid#000;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Switch */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 4rem;
+    cursor: pointer;
+    /* top: 100%;
+  left: 100%; */
+}
+
+.controls {
+    background-color: white;
+    height: 20rem;
+    width: 35rem;
+    /* position: absolute;
+    top: 30%;
+    right: 10%; */
+    padding: 3rem;
+    border: 3px solid #555;
+    border-radius: 10px;
+    box-shadow: 5px 10px rgba(73, 73, 73, 0.884);
+    transform: translate(-2%, -40%);
+    grid-area: controls;
+}
+
+.runbtn {
+    height: 4rem;
+    width: 10rem;
+    margin-top: 10%;
+    background-color: #2196f3;
+    border: 3px solid #2196f3;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    transition: color 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.runbtn:hover {
+    background-color: white;
+    border: 3px solid #2196f3;
+    cursor: pointer;
+    color: #000;
+    font-size: 2rem;
+}
+
+.medium {
+    font-size: 2rem;
+}

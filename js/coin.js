@@ -2,9 +2,9 @@ const coin = document.querySelector(".coindiv");
 const feather = document.querySelector(".featherdiv");
 const runbtn = document.querySelector(".runbtn");
 const container = document.querySelector(".container");
-const pipe = document.querySelector(".pipe1");
 const medium = document.querySelector(".medium");
-let body = document.querySelector("body");
+const switch1 = document.querySelector(".switch");
+const featherg = document.querySelector(".featherg");
 
 let state = "Air";
 
@@ -31,16 +31,19 @@ const anim = (a, b) => {
     feather.style.animation = `motino ${b}s ease-in-out`;
 };
 
-const changeColor = () => {
+const changeColor = (elem) => {
     if (state === "Air") {
         state = "Vacuum";
         container.style.backgroundColor = "#fff";
-        pipe.style.backgroundColor = "#fff";
         medium.textContent = `Current Medium Inside Chamber: ${state}`;
+        console.log(elem);
+        switch1.textContent = "ON";
+        featherg.innerHTML = "9.8 m/s<sup>2</sup>";
     } else {
         state = "Air";
         container.style.backgroundColor = "rgb(151, 206, 255)";
-        pipe.style.backgroundColor = "rgb(151, 206, 255)";
         medium.textContent = `Current Medium Inside Chamber: ${state}`;
+        switch1.textContent = "OFF";
+        featherg.innerHTML = "2.5 m/s<sup>2</sup>";
     }
 };

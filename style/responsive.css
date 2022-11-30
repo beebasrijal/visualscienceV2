@@ -2,10 +2,6 @@
     html {
         font-size: 9.8px;
     }
-
-    .body {
-        width: 40%;
-    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -16,11 +12,6 @@
     .cards-wrapper {
         grid-gap: 7rem;
     }
-
-    .body {
-        width: 50%;
-    }
-
     .transformer {
         top: 45%;
         height: 35rem;
@@ -101,18 +92,10 @@
     html {
         font-size: 7px;
     }
-
-    .body {
-        width: 70%;
-    }
 }
 @media only screen and (max-width: 600px) {
     html {
         font-size: 6px;
-    }
-
-    .body {
-        width: 80%;
     }
 }
 /* @media only screen and (min-width: 600px) {

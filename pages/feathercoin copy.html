@@ -17,10 +17,68 @@
             type="image/x-icon"
         />
         <link rel="stylesheet" href="../style/loading.css" />
-        <link rel="stylesheet" href="../style/coin.css" />
+        <link rel="stylesheet" href="../style/coin copy.css" />
         <link rel="stylesheet" href="../style/responsive.css" />
         <style>
+            @media only screen and (min-width: 769px) {
+                .controls {
+                    position: absolute;
+                    top: 50%;
+                    left: 60%;
+                }
+                .outercontainer {
+                    left: 40%;
+                }
+            }
+
             @media only screen and (max-width: 768px) {
+                .body {
+                    grid-template-columns: none;
+                    grid-template-rows: 3fr 1fr;
+                    grid-template-areas:
+                        "container"
+                        "controls";
+                }
+
+                .outercontainer {
+                    height: 65rem;
+                    width: 45rem;
+                }
+
+                .container {
+                    height: 60rem;
+                    width: 40rem;
+                }
+
+                .coing,
+                .featherg {
+                    font-size: 2.5rem;
+                }
+
+                .coin,
+                .feather {
+                    height: 6rem;
+                    width: 6rem;
+                }
+
+                .controls {
+                    width: 80%;
+                    height: 100%;
+                    margin-left: 7rem;
+                    position: static;
+                    text-align: center;
+                }
+
+                .medium {
+                    margin-top: 2rem;
+                    font-size: 3rem;
+                }
+
+                .runbtn {
+                    font-size: 3rem;
+                    width: 15rem;
+                    height: auto;
+                }
             }
         </style>
     </head>
@@ -61,51 +119,50 @@
                 </div>
             </div>
         </div>
-        <a href="/" class="logolink"
-            ><img
+        <a href="/" class="logolink">
+            <img
                 class="logo"
                 src="../assets/favicon_io/android-chrome-512x512.png"
                 alt="Logo"
         /></a>
         <div class="body">
-            <div class="outercontainer">
-                <div class="container">
-                    <div class="pipe1"></div>
-                    <div class="pipe2"></div>
-                    <div class="switchbox">
-                        <label class="switch">
-                            <input onclick="changeColor()" type="checkbox" />
-                            <span class="slider round"></span>
-                        </label>
+            <div class="content">
+                <div class="outercontainer">
+                    <div class="container">
+                        <div class="elements">
+                            <div class="coindiv">
+                                <span class="coing">9.8 m/s<sup>2</sup></span>
+                                <img
+                                    class="coin"
+                                    src="../assets/dollar-coin.svg"
+                                    alt="dollar Coin"
+                                />
+                            </div>
+                            <div class="featherdiv">
+                                <span class="featherg"
+                                    >2.5 m/s<sup>2</sup></span
+                                >
+                                <img
+                                    class="feather"
+                                    src="../assets/feather.svg"
+                                    alt="beatiful feather"
+                                />
+                            </div>
+                        </div>
                     </div>
-                    <div class="elements">
-                        <div class="coindiv">
-                            <span class="coing">9.8 m/s<sup>2</sup></span>
-                            <img
-                                class="coin"
-                                src="../assets/dollar-coin.svg"
-                                alt="dollar Coin"
-                            />
-                        </div>
-                        <div class="featherdiv">
-                            <span class="featherg">2.5 m/s<sup>2</sup></span>
-                            <img
-                                class="feather"
-                                src="../assets/feather.svg"
-                                alt="beatiful feather"
-                            />
-                        </div>
+                    <div class="box">
+                        <button class="switch" onclick="changeColor()">
+                            OFF
+                        </button>
                     </div>
                 </div>
-                <img
-                    class="motor"
-                    src="../assets/motor.png"
-                    alt="Vacuum Motor"
-                />
             </div>
 
             <div class="controls">
-                <h3 class="medium">Current Medium Inside Chamber: Air</h3>
+                <h3 class="medium">
+                    Current Medium Inside Chamber: <br />
+                    Air
+                </h3>
                 <button onclick="restart()" class="runbtn">Run</button> <br />
             </div>
         </div>
