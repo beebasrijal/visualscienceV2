@@ -1,99 +1,112 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
 }
 
 body {
-  /* background: #262626;
+    /* background: #262626;
    */
-  height: 100vh;
-  width: auto;
-  overflow: hidden;
-  font-family: "Poppins";
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+    font-family: "Poppins";
 }
 
 .parent {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 3fr 1.2fr;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1.2fr;
 }
 
 .container {
-  width: auto;
-  background: linear-gradient(90deg, rgba(146, 255, 250, 0.815), rgb(97, 192, 255));
+    width: auto;
+    background: linear-gradient(
+        90deg,
+        rgba(146, 255, 250, 0.815),
+        rgb(97, 192, 255)
+    );
 }
 
 .spring {
-  width: 100px;
-  height: 300px;
-  position: absolute;
-  top: 5%;
-  margin-left: 50px;
-  right: 60%;
+    width: 10rem;
+    height: 30rem;
+    position: absolute;
+    top: 5%;
+    margin-left: 5rem;
+    right: 60%;
 }
 
 .cup {
-  position: absolute;
-  top: 71%;
-  margin-left: 50px;
-  width: 150px;
-  height: 180px;
-  border: 6px solid #262626;
-  border-top: 2px solid transparent;
-  border-radius: 15px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  right: 60%;
+    position: absolute;
+    top: 71%;
+    margin-left: 5rem;
+    width: 15rem;
+    height: 18rem;
+    border: 6px solid #262626;
+    border-top: 2px solid transparent;
+    border-radius: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    right: 60%;
 }
 
 .liquid {
-  background-color: aqua;
-  height: 100px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  border-bottom: 2px solid black;
-  /* border-radius: 15px; */
+    background-color: aqua;
+    height: 10rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 2px solid black;
+    /* border-radius: 15px; */
+}
+
+.liquidlabel {
+    font-size: 1.8rem;
 }
 
 #select-liquid {
-  font-size: 18px;
-  background-color: aquamarine;
+    font-size: 1.8rem;
+    background-color: aquamarine;
 }
 
 .values {
-  margin: 40px 30px;
-  /* padding: 10px; */
+    margin: 4rem 3rem;
+    /* padding: 10px; */
 }
 
 #final-weight {
-  margin: 20px 0;
+    margin: 2rem 0;
 }
 
 .results {
-  font-size: 18px;
+    font-size: 2rem;
 }
 
 .button {
-  margin: 50px 0;
-  background-color: aquamarine;
-  height: 30px;
-  width: 100px;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 30px;
-  font-size: 18px;
-  border-radius: 20px;
-  box-shadow: 2px 5px rgb(49, 49, 49);
-  cursor: pointer;
+    margin: 5rem 0;
+    background-color: aquamarine;
+    height: auto;
+    width: 10rem;
+    text-align: center;
+    /* padding-top: 0.5rem;
+    padding-bottom: 3rem; */
+    padding: 0.5rem;
+    font-size: 2rem;
+    border-radius: 20px;
+    box-shadow: 2px 5px rgb(49, 49, 49);
+    cursor: pointer;
 }
 
 .controls {
-  border-left: 1px solid black;
+    border-left: 1px solid black;
 }
 
 #airweight {
-  margin-top: 70px;
+    margin-top: 5rem;
 }

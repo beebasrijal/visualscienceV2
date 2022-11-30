@@ -1,5 +1,5 @@
-const coin = document.querySelector(".coin");
-const feather = document.querySelector(".feather");
+const coin = document.querySelector(".coindiv");
+const feather = document.querySelector(".featherdiv");
 const runbtn = document.querySelector(".runbtn");
 const container = document.querySelector(".container");
 const pipe = document.querySelector(".pipe1");
@@ -7,20 +7,20 @@ const medium = document.querySelector(".medium");
 
 let state = "Air";
 
-document.getElementsByTagName("body").onload = function() {
+document.getElementsByTagName("body").onload = function () {
     coin.style.animation = "none";
     feather.style.animation = "none";
-}
+};
 
 const restart = () => {
     if (state === "Air") {
-        anim(1.2,1.6);
+        anim(1.2, 4);
     } else {
         anim(1.2, 1.2);
     }
-}
+};
 
-const anim = (a,b) => {
+const anim = (a, b) => {
     coin.style.animation = "none";
     coin.offsetHeight;
     coin.style.animation = `motino ${a}s ease-in-out`;
@@ -28,19 +28,18 @@ const anim = (a,b) => {
     feather.style.animation = "none";
     feather.offsetHeight;
     feather.style.animation = `motino ${b}s ease-in-out`;
-}
+};
 
 const changeColor = () => {
     if (state === "Air") {
-        state = "Vacuum"
+        state = "Vacuum";
         container.style.backgroundColor = "#fff";
         pipe.style.backgroundColor = "#fff";
         medium.textContent = `Current Medium Inside Chamber: ${state}`;
     } else {
         state = "Air";
-        container.style.backgroundColor = "aliceblue";
-        pipe.style.backgroundColor = "aliceblue";
+        container.style.backgroundColor = "rgb(151, 206, 255)";
+        pipe.style.backgroundColor = "rgb(151, 206, 255)";
         medium.textContent = `Current Medium Inside Chamber: ${state}`;
     }
-}
-
+};

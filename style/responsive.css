@@ -77,6 +77,24 @@
     .type {
         margin-top: 1rem;
     }
+
+    .cup {
+        height: 15rem;
+        width: 14rem;
+        top: 65%;
+    }
+
+    .spring {
+        height: 25rem;
+        width: 10rem;
+        right: 59.5%;
+    }
+    #air-weight {
+        margin-top: 4rem;
+    }
+    .results {
+        font-size: 1.8rem;
+    }
 }
 
 @media only screen and (max-width: 768px) {
