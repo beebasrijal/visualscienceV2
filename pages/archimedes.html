@@ -18,6 +18,64 @@
         />
         <link rel="stylesheet" href="../style/archimedes.css" />
         <link rel="stylesheet" href="../style/responsive.css" />
+        <style>
+            @media only screen and (max-width: 768px) {
+                .parent {
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+                    height: 100vh;
+                    width: 100vw;
+                }
+
+                .parent .container {
+                    height: 100%;
+                }
+
+                .parent .container .container2 {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .parent .container2 .cup {
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translate(-50%, -100%);
+                    margin: 0;
+                }
+
+                .parent .container2 .spring {
+                    position: absolute;
+                    margin: 0;
+                    left: 50%;
+                    top: 10%;
+                    transform: translateX(-50%);
+                }
+
+                .parent .controls {
+                    width: 100%;
+                    background-color: antiquewhite;
+                }
+
+                .parent .controls .values {
+                    position: absolute;
+                    left: 10%;
+                    margin-top: 10rem;
+                    margin-right: 10rem;
+                }
+
+                .button {
+                    width: 12rem;
+                    font-size: 2.5rem;
+                }
+
+                .liquidlabel,
+                .results {
+                    font-size: 2.8rem;
+                }
+            }
+        </style>
     </head>
     <body>
         <div class="parent">

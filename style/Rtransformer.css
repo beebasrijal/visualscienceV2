@@ -27,7 +27,7 @@
         height: 100vh;
         width: 100vw;
         display: grid;
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: 1.5fr 1fr;
         grid-template-areas:
             "transformer"
             "controls";
@@ -35,6 +35,7 @@
 
     .container .coils {
         grid-area: transformer;
+        height: auto;
     }
 
     .container .controls {
