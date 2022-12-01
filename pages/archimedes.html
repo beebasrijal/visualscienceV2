@@ -31,6 +31,7 @@
                     width: 10rem;
                     left: 50%;
                 }
+
                 #air-weight {
                     margin-top: 4rem;
                 }
@@ -95,6 +96,22 @@
                 .results {
                     font-size: 2.8rem;
                 }
+
+                .weightsvg {
+                    /* left: 70%; */
+                    margin-left: 3rem;
+                }
+            }
+
+            .weightsvg {
+                display: inline-block;
+                font-size: 1.8rem;
+                background-color: #fff;
+                padding: 0.2rem;
+                position: absolute;
+                border-radius: 2px;
+                top: 10%;
+                left: 50%;
             }
         </style>
     </head>
@@ -107,6 +124,7 @@
                         alt="spring_balance"
                         class="spring"
                     />
+                    <span class="weightsvg">15 N</span>
                     <div class="cup">
                         <div class="outline"></div>
                         <div class="liquid"></div>
@@ -141,4 +159,7 @@
 
     <script src="../js/archimedes.js"></script>
     <!-- <script src="windTurbine.js"></script> -->
+    <script>
+        const svg = document.querySelector(".spring");
+    </script>
 </html>

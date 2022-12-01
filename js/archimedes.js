@@ -1,6 +1,7 @@
 // DOM manipulation
 const spring = document.querySelector(".spring");
 const liquid = document.querySelector(".liquid");
+const weightsvg = document.querySelector(".weightsvg");
 const cup = document.querySelector(".cup");
 var liquidRect = liquid.getBoundingClientRect();
 const finalWeight = document.getElementById("final-weight");
@@ -65,6 +66,12 @@ const moveSpring = (event) => {
                 : topValue > TopYCoordinate
                 ? BotoomYCoordinate - Height + "px"
                 : TopYCoordinate + "px";
+        weightsvg.style.top =
+            topValue > TopYCoordinate && topValue + Height < BotoomYCoordinate
+                ? topValue + 50 + "px"
+                : topValue > TopYCoordinate
+                ? BotoomYCoordinate - Height + 50 + "px"
+                : TopYCoordinate + 50 + "px";
         var densityOfLiquid = densityArray[parseInt(selectLiquid.value)];
 
         volumeDisplaced(densityOfLiquid);
@@ -101,6 +108,7 @@ selectLiquid.oninput = function () {
 };
 function reset() {
     spring.style.top = TopYCoordinate + "px";
+    weightsvg.style.top = TopYCoordinate + 50 + "px";
     if (window.innerWidth > 768) {
         spring.style.left = "50%";
     } else {
@@ -111,6 +119,7 @@ function reset() {
     density.innerHTML = `Density: ${densityArray[0]} kg/m` + "3".sup();
     weightDisplaced.innerHTML = `Weight of liqiud displaced: 0 N`;
     finalWeight.innerHTML = `Weight of block: ${weightOfBlock} N`;
+    weightsvg.textContent = `${weightOfBlock} N`;
 }
 
 function volumeDisplaced(densityOfLiquid) {
@@ -130,9 +139,13 @@ function volumeDisplaced(densityOfLiquid) {
         liquid.style.height =
             liquidinitialHeight + waterDisplacedVolume * Math.pow(10, 4) + "px";
         finalWeight.innerHTML = `Weight of block: ${finalWeightBlock} N`;
+        weightsvg.textContent = `${finalWeightBlock} N`;
+
         weightDisplaced.innerHTML = `Weight of liqiud displaced:${waterDisplacedWeight} N`;
     } else {
         finalWeight.innerHTML = `Weight of block: 15 N`;
+        weightsvg.textContent = `15 N`;
+
         weightDisplaced.innerHTML = `Weight of liqiud displaced: 0 N`;
     }
 }

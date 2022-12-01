@@ -43,6 +43,7 @@ body {
 .spring {
     width: 10rem;
     height: 30rem;
+    display: block;
     position: absolute;
     top: 10%;
     margin-left: 5rem;
