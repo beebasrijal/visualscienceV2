@@ -25,6 +25,7 @@ function DisplayAccelerationHeight(h) {
     accelerationElem.innerHTML = `<span class="fd">Acceleration</span> = ${accelerationValue.toFixed(
         2
     )} ms<sup>-2</sup>`;
+    adjg.innerHTML = `${accelerationValue.toFixed(2)} ms<sup>-2</sup>`;
     sliderDepth.value = 0;
 }
 function DisplayAccelerationDepth(d) {
@@ -33,6 +34,8 @@ function DisplayAccelerationDepth(d) {
     accelerationElem.innerHTML = `<span class="fd">Acceleration</span> = ${accelerationValue.toFixed(
         2
     )} ms<sup>-2</sup>`;
+    adjg.innerHTML = `${accelerationValue.toFixed(2)} ms<sup>-2</sup>`;
+
     sliderHeight.value = 0;
 }
 
@@ -64,6 +67,7 @@ function resetWindow() {
     sliderDepth.value = 0;
     circle2.style.top = minValue + "%";
     accelerationElem.innerHTML = `<span class="fd">Acceleration</span> = 9.8 ms<sup>-2</sup>`;
+    adjg.innerHTML = `9.8 ms<sup>-2</sup>`;
     sliderHeightValue.innerHTML = 0 + "km";
     sliderDepthValue.innerHTML = 0 + "km";
 }
