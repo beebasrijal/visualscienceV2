@@ -54,7 +54,7 @@ const moveSpring = (event) => {
 
     // move it out of any current parents directly into body
     // to make it positioned relative to the body
-    document.body.append(spring);
+    // document.body.append(spring);
 
     function moveAt(pageY) {
         var Height = spring.offsetHeight;
@@ -76,10 +76,20 @@ const moveSpring = (event) => {
     // (2) move the spring on mousemove
     document.addEventListener("mousemove", onMouseMove);
 
+    document.addEventListener("touchmove", (event) => {
+        moveAt(event.touches[0].pageY);
+    });
+
     // (3) drop the spring, remove unneeded handlers
     document.onmouseup = function () {
         document.removeEventListener("mousemove", onMouseMove);
         spring.onmouseup = null;
+    };
+    document.ontouchend = function () {
+        document.addEventListener("touchmove", (event) => {
+            moveAt(event.touches[0].pageY);
+        });
+        spring.ontouchend = null;
     };
 };
 

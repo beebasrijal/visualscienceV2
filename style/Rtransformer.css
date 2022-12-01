@@ -27,6 +27,12 @@
         height: 35rem;
     }
 
+    .controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .controls .slidecontainer {
         margin: 0.5rem 3rem;
     }
