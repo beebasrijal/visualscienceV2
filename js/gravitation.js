@@ -13,7 +13,7 @@ const distanceValueContainer = document.getElementById(
 const LeftXCoordinate = 0;
 const BotoomYCoordinate = window.innerHeight;
 const TopYCoordinate = 0;
-const RightXCoordinate = controls.getBoundingClientRect().x;
+var RightXCoordinate = controls.getBoundingClientRect().x;
 var mouseMovement1 = true;
 var mouseMovement2 = true;
 var maxDistance = 50; // distance between two masses initally
@@ -22,11 +22,24 @@ window.onload = resetWindow;
 calculateForce();
 circle1.addEventListener("mousedown", function (e) {
   moveCircle(e, circle1, circle2);
-  calculateForce();
+  // calculateForce();
 });
 circle2.addEventListener("mousedown", function (e) {
   moveCircle(e, circle2, circle1);
 });
+
+// Added lines
+// --------------------------------------------------------------------------
+
+// Touch event
+circle1.addEventListener("touchmove", function (e) {
+  moveCircle(e, circle1, circle2);
+  // calculateForce();
+});
+circle2.addEventListener("touchmove", function (e) {
+  moveCircle(e, circle2, circle1);
+});
+// --------------------------------------------------------------------------
 
 mass1.oninput = function () {
   calculateForce();
@@ -73,6 +86,7 @@ function scaling(circleElem, sliderValue, scaleValue) {
 }
 
 function moveCircle(event, circleElem, notMovingCircle) {
+  RightXCoordinate = controls.getBoundingClientRect().x;
   // (1) prepare to moving: make absolute and on top by z-index
   circleElem.style.position = "absolute";
   circleElem.style.zIndex = 1000;
