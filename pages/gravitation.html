@@ -12,34 +12,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style/loading.css">
     <link rel="stylesheet" href="../style/gravitation.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+    <style>
+      .unsupported {
+        display: none;
+      }
+      @media only screen and (max-width: 768px) {
+        .parent {
+          grid-template-columns: none;
+          grid-template-rows: 3fr 1fr;
+          grid-template-areas: 
+          "container"
+          "controls";
+        }
+        .unsupported {
+        height: 100vh;
+        width: 100vw;
+        background-color: #fff;
+        z-index: 500000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        text-align: center;
+      }
+      }
+    </style>
   </head>
   <body scroll="no" style="overflow: hidden;" onload="removeloader();resetWindow()">
     <div id = "page-content">
-	
+      
       <div style="width:100px;">
-      <div style="position:absolute;  top:50%; left: 50%; transform: translate(-50%, -50%);"> <!-- Change this value to move whole logo -->
-        <div style="display:static; position:relative; overflow:hidden; width:300px; height: 300px;">
-          <img src="../assets/favicon_io/android-chrome-512x512.png" alt="Logo" id="center">
-          <div id="orbitX">
-          </div>
-          <div id="orbitY">
-            <p style="margin: 0 0 0 90px;"></p>
-          </div>
-          <div id="orbitZ">
-            <p style="margin: 25px 0 0 75px;"></p>
-          </div>
-        </div>   
-      </div>
+        <div style="position:absolute;  top:50%; left: 50%; transform: translate(-50%, -50%);"> <!-- Change this value to move whole logo -->
+          <div style="display:static; position:relative; overflow:hidden; width:300px; height: 300px;">
+            <img src="../assets/favicon_io/android-chrome-512x512.png" alt="Logo" id="center">
+            <div id="orbitX">
+            </div>
+            <div id="orbitY">
+              <p style="margin: 0 0 0 90px;"></p>
+            </div>
+            <div id="orbitZ">
+              <p style="margin: 25px 0 0 75px;"></p>
+            </div>
+          </div>   
+        </div>
       </div>
     </div>
-
+    
     <a href="/" class="logolink"><img class="logo" src="../assets/favicon_io/android-chrome-512x512.png" alt="Logo"></a>
+    <div class="unsupported">This simulation is currently not available for mobile phones.<br> Sorry for the inconvenience.</div>
     <div class="parent">
       <div class="container">
         <img id="circle-1" class="circle1" src="../assets/planet1.svg" alt="Body 1">
         <img id="circle-2" class="circle2" src="../assets/planet2.svg" alt="Body 1">
       </div>
-
+      
       <div class="controls">
         <div class="inputs">
           <div class="slidecontainer">

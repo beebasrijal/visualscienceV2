@@ -30,6 +30,18 @@ body {
     z-index: 2;
 }
 
+.adj_g {
+    position: absolute;
+    top: -10%;
+    left: 60%;
+    background-color: #00d66b;
+    font-size: 0.9rem;
+    padding: 0.2rem;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+}
+
 @keyframes rotation {
     0% {
         transform: rotateZ(0deg);

@@ -4,6 +4,7 @@ var sliderHeightValue = document.querySelector(".height");
 var sliderDepthValue = document.querySelector(".depth");
 var sliderDepth = document.getElementById("slider-depth");
 var circle1 = document.getElementById("circle-1");
+var adjg = document.querySelector(".adj_g");
 var minValue = -12;
 var mass = 6 * Math.pow(10, 24);
 const resetbtn = document.querySelector(".reset");
@@ -40,6 +41,7 @@ sliderHeight.oninput = function () {
     height.innerHTML = heightValue + " km";
     DisplayAccelerationHeight(heightValue);
     circle2.style.top = minValue - heightValue / 100 + "%";
+    adjg.style.top = minValue - heightValue / 100 + 2 + "%";
     depth.innerHTML = 0 + " km";
 };
 
@@ -48,6 +50,7 @@ sliderDepth.oninput = function () {
     depth.innerHTML = depthValue + " km";
     DisplayAccelerationDepth(depthValue);
     circle2.style.top = minValue + 0.00893 * depthValue + "%";
+    adjg.style.top = minValue + 0.00893 * depthValue + 2 + "%";
     height.innerHTML = 0 + " km";
 };
 

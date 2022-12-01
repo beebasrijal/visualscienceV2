@@ -64,10 +64,11 @@
         height: 100vh;
         width: 100vw;
         display: grid;
-        grid-template-rows: 1.5fr 1fr;
+        grid-template-rows: 1fr 1.2fr;
         grid-template-areas:
             "transformer"
             "controls";
+        grid-template-columns: none;
     }
 
     .container .coils {
@@ -77,6 +78,51 @@
 
     .container .controls {
         grid-area: controls;
+    }
+
+    .controls .slidecontainer {
+        margin: 5rem 5rem;
+        height: 100%;
+    }
+
+    .controls .pcoil,
+    .controls .scoil {
+        margin-top: 03rem;
+        font-size: 2rem;
+    }
+
+    .pvoltage {
+        margin-top: 03rem;
+        font-size: 2rem;
+    }
+
+    .pcurrent {
+        margin-top: 4rem;
+        font-size: 1.8rem;
+    }
+
+    .ppower {
+        font-size: 1.8rem;
+    }
+
+    .type {
+        font-size: 2rem;
+        margin-top: 4rem;
+    }
+
+    .scoil {
+        margin-bottom: 03rem;
+        font-size: 1.6rem;
+    }
+
+    .pcoilNum,
+    .scoilNum,
+    .pvoltageNum {
+        font-size: 1.8rem;
+    }
+
+    .rslt {
+        font-size: 1.8rem;
     }
 }
 @media only screen and (max-width: 600px) {

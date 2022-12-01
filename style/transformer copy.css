@@ -64,7 +64,7 @@ body {
     cursor: pointer;
 }
 
-/* .container {
+.container {
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -74,7 +74,7 @@ body {
 
 .controls {
     border-left: 1px solid black;
-} */
+}
 
 .controls .slidecontainer {
     margin: 2.5rem 3.5rem;

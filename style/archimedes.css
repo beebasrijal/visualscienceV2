@@ -31,20 +31,28 @@ body {
         rgba(146, 255, 250, 0.815),
         rgb(97, 192, 255)
     );
+    height: 100%;
+}
+
+.container2 {
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 .spring {
     width: 10rem;
     height: 30rem;
     position: absolute;
-    top: 5%;
+    top: 10%;
     margin-left: 5rem;
-    right: 60%;
+    left: 50%;
+    background-color: #262626;
 }
 
 .cup {
     position: absolute;
-    top: 71%;
+    top: 100%;
     margin-left: 5rem;
     width: 15rem;
     height: 18rem;
@@ -53,7 +61,8 @@ body {
     border-radius: 15px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    right: 60%;
+    left: 50%;
+    transform: translate(-50%, -100%);
 }
 
 .liquid {

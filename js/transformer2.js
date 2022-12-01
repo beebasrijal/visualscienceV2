@@ -38,86 +38,90 @@ let pcoilnum = 1;
 let pvoltage = 1;
 
 window.onload = () => {
-  sliders.forEach((element) => {
-    element.value = 0;
-  });
-  UPDATE();
+    sliders.forEach((element) => {
+        element.value = 0;
+    });
+    UPDATE();
 };
 
 // Added lines
 // --------------------------------------------------------------------------
 const calcuations = () => {
-  pvoltageValue = parseInt(pVolatageSlider.value);
-  pCoilValue = parseInt(pCoilSlider.value);
-  sCoilValue = parseInt(sCoilSlider.value);
+    pvoltageValue = parseInt(pVolatageSlider.value);
+    pCoilValue = parseInt(pCoilSlider.value);
+    sCoilValue = parseInt(sCoilSlider.value);
 
-  pCurrent = calculatePrimaryCurrent(pvoltageValue, Power);
-  sVolatage = calculateSecondaryVoltage(pCoilValue, sCoilValue, pvoltageValue);
-  sCurrent = calculateSecondaryCurrent(pvoltageValue, pCurrent, sVolatage);
+    pCurrent = calculatePrimaryCurrent(pvoltageValue, Power);
+    sVolatage = calculateSecondaryVoltage(
+        pCoilValue,
+        sCoilValue,
+        pvoltageValue
+    );
+    sCurrent = calculateSecondaryCurrent(pvoltageValue, pCurrent, sVolatage);
 };
 
 const calculatePrimaryCurrent = (voltage, power) => {
-  return (power / voltage).toFixed(2);
+    return (power / voltage).toFixed(2);
 };
 
 const calculateSecondaryVoltage = (
-  coilPrimary,
-  coilSecondary,
-  voltagePrimary
+    coilPrimary,
+    coilSecondary,
+    voltagePrimary
 ) => {
-  return ((voltagePrimary * coilSecondary) / coilPrimary).toFixed(2);
+    return ((voltagePrimary * coilSecondary) / coilPrimary).toFixed(2);
 };
 
 const calculateSecondaryCurrent = (voltagePrimary, currentPrimary, secvolt) => {
-  return ((voltagePrimary * currentPrimary) / secvolt).toFixed(2);
+    return ((voltagePrimary * currentPrimary) / secvolt).toFixed(2);
 };
 
 const test1 = (pcoil, scoil) => {
-  if (parseInt(pcoil) > parseInt(scoil)) {
-    return "Transformer Type: Step-Down Transformer";
-  } else if (parseInt(pcoil) < parseInt(scoil)) {
-    return "Transformer Type: Step-Up Transformer";
-  } else {
-    return "Voltage is neither increased nor decreased.";
-  }
+    if (parseInt(pcoil) > parseInt(scoil)) {
+        return "Transformer Type: Step-Down Transformer";
+    } else if (parseInt(pcoil) < parseInt(scoil)) {
+        return "Transformer Type: Step-Up Transformer";
+    } else {
+        return "Voltage is neither increased nor decreased.";
+    }
 };
 
 const test2 = (pcoil, scoil) => {
-  if (parseInt(pcoil) > parseInt(scoil)) {
-    return "Step-Down Transformer";
-  } else if (parseInt(pcoil) < parseInt(scoil)) {
-    return "Step-Up Transformer";
-  }
+    if (parseInt(pcoil) > parseInt(scoil)) {
+        return "STEP-DOWN TRANSFORMER";
+    } else if (parseInt(pcoil) < parseInt(scoil)) {
+        return "STEP-UP TRANSFORMER";
+    }
 };
 // --------------------------------------------------------------------------
 
 const pcoilchange = (num) => {
-  let NUM = parseInt(num);
-  //   pcoilnum = NUM;
-  //   reset();
-  resetPrimary();
+    let NUM = parseInt(num);
+    //   pcoilnum = NUM;
+    //   reset();
+    resetPrimary();
 
-  for (let i = 0; i < NUM - 1; i++) {
-    P[i].style.opacity = 1;
-  }
-  UPDATE();
+    for (let i = 0; i < NUM - 1; i++) {
+        P[i].style.opacity = 1;
+    }
+    UPDATE();
 };
 
 const scoilchange = (num) => {
-  let NUM = parseInt(num);
-  //   scoilnum = NUM;
-  //   reset();
-  resetSecondary();
+    let NUM = parseInt(num);
+    //   scoilnum = NUM;
+    //   reset();
+    resetSecondary();
 
-  for (let i = 0; i < NUM - 1; i++) {
-    S[i].style.opacity = 1;
-  }
-  UPDATE();
+    for (let i = 0; i < NUM - 1; i++) {
+        S[i].style.opacity = 1;
+    }
+    UPDATE();
 };
 
 const pvoltagechange = (num) => {
-  pvoltage = parseInt(num);
-  UPDATE();
+    pvoltage = parseInt(num);
+    UPDATE();
 };
 
 // const reset = () => {
@@ -130,14 +134,14 @@ const pvoltagechange = (num) => {
 // };
 
 const resetPrimary = () => {
-  P.forEach((element) => {
-    element.style.opacity = 0;
-  });
+    P.forEach((element) => {
+        element.style.opacity = 0;
+    });
 };
 const resetSecondary = () => {
-  S.forEach((element) => {
-    element.style.opacity = 0;
-  });
+    S.forEach((element) => {
+        element.style.opacity = 0;
+    });
 };
 // const UPDATE = () => {
 //   nPW.innerHTML = "Number of Primary Windings: " + pcoilnum;
@@ -155,17 +159,17 @@ const resetSecondary = () => {
 // };
 
 const UPDATE = () => {
-  calcuations();
-  nPW.innerHTML = "Number of Primary Windings: " + pCoilValue;
-  nSW.innerHTML = "Number of Secondary Windings: " + sCoilValue;
-  PV.innerHTML = "Primary Voltage: " + pvoltageValue;
-  PC.innerHTML = "P. Current: " + pCurrent;
-  SV.innerHTML = "S. Voltage: " + sVolatage;
-  SC.innerHTML = "S. Current: " + sCurrent;
+    calcuations();
+    nPW.innerHTML = "Number of Primary Windings: " + pCoilValue;
+    nSW.innerHTML = "Number of Secondary Windings: " + sCoilValue;
+    PV.innerHTML = "Primary Voltage: " + pvoltageValue + " V";
+    PC.innerHTML = "P. Current: " + pCurrent + " A";
+    SV.innerHTML = "S. Voltage: " + sVolatage + " V";
+    SC.innerHTML = "S. Current: " + sCurrent + " A";
 
-  // --------------------------------------------------------------------------
-  textHighlighted.innerHTML = test1(pCoilValue, sCoilValue);
-  textOnTransformer.textContent = test2(pCoilValue, sCoilValue);
+    // --------------------------------------------------------------------------
+    textHighlighted.innerHTML = test1(pCoilValue, sCoilValue);
+    textOnTransformer.textContent = test2(pCoilValue, sCoilValue);
 };
 
 UPDATE();
