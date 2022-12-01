@@ -11,7 +11,43 @@
     <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/loading.css">
     <link rel="stylesheet" href="../style/wind.css">
+    <link rel="stylesheet" href="../style/responsive.css">
     <script src="../js/wind.js"></script>
+    <style>
+        @media only screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: none;
+                grid-template-rows: 2fr 1fr;
+                grid-template-areas: 
+                "turbine"
+                "controls";
+            }
+
+            .station {
+                display: none;
+            }
+
+            .scontainer .powerd {
+                display: none;
+            }
+
+            .velocity, .result {
+                font-size: 2.5rem;
+            }
+            .controls .reset {
+                margin-top: 4rem;
+            }
+            .controls {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .controls .slidecontainer {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 <body scroll="no" style="overflow: hidden;" onload="removeloader()">
     <div id="page-content">
@@ -33,6 +69,7 @@
         </div>
       </div>
     <div class="container">
+        <a href="/" class="logolink"><img class="logo" src="../assets/favicon_io/android-chrome-512x512.png" alt="Logo"></a>
         <!-- <?xml version="1.0" encoding="utf-8" ?> -->
         <div class="turbine">
             <object id="windTurbineWidget" role="svidget" data="windTurbineWidget.svg" type="image/svg+xml" width="200" height="300">
