@@ -37,13 +37,13 @@ const changeColor = (elem) => {
         container.style.backgroundColor = "#fff";
         medium.textContent = `Current Medium Inside Chamber: ${state}`;
         console.log(elem);
-        switch1.textContent = "ON";
+        switch1.textContent = "Vacuum";
         featherg.innerHTML = "9.8 m/s<sup>2</sup>";
     } else {
         state = "Air";
         container.style.backgroundColor = "rgb(151, 206, 255)";
         medium.textContent = `Current Medium Inside Chamber: ${state}`;
-        switch1.textContent = "OFF";
+        switch1.textContent = "Air";
         featherg.innerHTML = "2.5 m/s<sup>2</sup>";
     }
 };

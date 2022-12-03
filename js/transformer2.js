@@ -18,6 +18,8 @@ const SP = document.querySelector(".spower");
 // --------------------------------------------------------------------------
 const textHighlighted = document.querySelector(".type");
 const textOnTransformer = document.querySelector(".transformer_type_svg");
+const svg_primary_voltage = document.querySelector(".svg_primary_voltage");
+const svg_secondary_voltage = document.querySelector(".svg_secondary_voltage");
 
 // Sliders
 let pVolatageSlider = document.getElementById("pvoltage-value");
@@ -162,9 +164,15 @@ const UPDATE = () => {
     calcuations();
     nPW.innerHTML = "Number of Primary Windings: " + pCoilValue;
     nSW.innerHTML = "Number of Secondary Windings: " + sCoilValue;
-    PV.innerHTML = "Primary Voltage: " + pvoltageValue + " V";
+
+    PV.innerHTML = "Primary Voltage: " + pvoltageValue + ".00 V";
+    svg_primary_voltage.textContent = pvoltageValue + ".00 V";
+
     PC.innerHTML = "P. Current: " + pCurrent + " A";
+
     SV.innerHTML = "S. Voltage: " + sVolatage + " V";
+    svg_secondary_voltage.textContent = sVolatage + " V";
+
     SC.innerHTML = "S. Current: " + sCurrent + " A";
 
     // --------------------------------------------------------------------------

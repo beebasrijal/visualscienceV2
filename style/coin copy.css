@@ -128,12 +128,13 @@ body {
 }
 
 .box .switch {
-    width: 5rem;
+    width: 7rem;
     height: 3rem;
     background-color: #fff;
     border: none;
     font-size: 1.8rem;
     transition: all 0.1s ease;
+    border-radius: 2px;
 }
 
 .box .switch:hover {
@@ -168,7 +169,7 @@ body {
 
 .switchbox {
     height: 5rem;
-    width: 3rem;
+    width: 4rem;
     position: absolute;
     top: 92%;
     right: -132%;
@@ -184,8 +185,8 @@ body {
 .switch {
     position: relative;
     display: inline-block;
-    width: 3rem;
-    height: 4rem;
+    width: 4rem;
+    height: 5rem;
     cursor: pointer;
     /* top: 100%;
   left: 100%; */
